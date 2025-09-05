@@ -1,0 +1,20 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/cloud/10.13.0.cl",
+      "destination": "/cloud/10.13.0.cl/",
+      "statusCode": 301 }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src * 'unsafe-eval' 'unsafe-inline' data: filesystem: about: blob:;"
+        }
+      ]
+    }
+  ]
+}

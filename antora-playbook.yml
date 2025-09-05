@@ -1,0 +1,42 @@
+site:
+  title: ThoughtSpot Documentation
+  url: https://preview-docs-thoughtspot-com.vercel.app
+  start_page: cloud::index.adoc
+  keys:
+    google_analytics: UA-44946579-2
+# urls:
+#  html_extension_style: indexify
+content:
+  sources:
+  # embedding empty credentials in the URL disables the Edit this Page link for any page created from this repository
+  - url: git@github.com:thoughtspot/thoughtspot-docs.git
+  # Cloud docs branches
+    branches: ['10.13.0.cl']
+    start_path: cloud/
+ui:
+  bundle:
+    # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    url: ui-bundle/ui2-bundle.zip
+  supplemental_files:
+  - path: .nojekyll
+  - path: ui.yml
+    contents: "static_files: [ .nojekyll ]"
+    snapshot: true
+asciidoc:
+  attributes:
+    #software: true
+    #cloud: false
+    page-company: ThoughtSpot
+    tabs: tabs
+    support-url: https://community.thoughtspot.com/customers/s/contactsupport[ThoughtSpot Support^]
+    seekwell: SeekWell
+    cl-subscription-agreement: https://www.thoughtspot.com/legal/thoughtspot-cloud-subscription-agreement[subscription agreement^]
+  extensions:
+  - '@asciidoctor/tabs'
+output:
+  clean: true
+  dir: build/
+runtime:
+  fetch: true
+  log:
+    level: error
