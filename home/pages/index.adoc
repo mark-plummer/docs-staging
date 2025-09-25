@@ -1,0 +1,6 @@
+= Welcome to ThoughtSpot Preview Documentation
+:page-layout: home
+
+++++
+<a href="https://<your-express-app-url>/login">Log In</a>
+++++
