@@ -1,6 +1,6 @@
 site:
   title: ThoughtSpot Documentation
-  url: https://preview-docs-thoughtspot-com.vercel.app
+  url: https://preview-docs.thoughtspot.com
   start_page: home::index.adoc
   keys:
     google_analytics: UA-44946579-2
