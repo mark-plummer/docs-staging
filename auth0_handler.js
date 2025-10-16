@@ -61,7 +61,7 @@ auth0Script.onload = () => {
 				auth0Client.logout();
 			});
 
-			if (window.location.pathname.includes('/home/')) {
+			if (window.location.pathname.includes('/home')) {
 				return window.location.href = '/cloud/10.12.0.cl/';
 			}
 			
@@ -75,7 +75,7 @@ auth0Script.onload = () => {
 
 		} else {
 			// If the user is not logged in and the current page is the home page, show the login button
-			if (window.location.pathname.includes('/home/')) {
+			if (window.location.pathname.includes('/home')) {
 				const loginButton = document.createElement("button");
 				loginButton.id = "btn-login";
 				loginButton.textContent = "Log in";
@@ -99,7 +99,7 @@ auth0Script.onload = () => {
 			} else {
 				// If the user is not logged in and the current page is not the home page, redirect to the home page
 				if (window.location.origin.indexOf('ngrok') !== -1) {
-					window.location.href = '/home/';
+					window.location.href = '/home';
 				} else {
 					window.location.href = '/home/index.html';
 				}
