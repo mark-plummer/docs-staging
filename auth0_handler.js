@@ -6,7 +6,7 @@ auth0Script.onload = () => {
 		domain: "dev-0hg062dftmmwr5em.us.auth0.com",
 		clientId: "Gr54npG45lJjwBtitl2P6bASh0VRIwq4",
 		authorizationParams: {
-			redirect_uri: 'https://thoughtspotdocs.ngrok.io/cloud/10.12.0.cl/'
+			redirect_uri: window.location.origin + '/cloud/10.12.0.cl/'
 		}
 	}).then(async (auth0Client) => {
 
@@ -61,7 +61,7 @@ auth0Script.onload = () => {
 				auth0Client.logout();
 			});
 
-			if (window.location.pathname.includes('/home/index.html')) {
+			if (window.location.pathname.includes('/home/')) {
 				return window.location.href = '/cloud/10.12.0.cl/';
 			}
 			
@@ -75,7 +75,7 @@ auth0Script.onload = () => {
 
 		} else {
 			// If the user is not logged in and the current page is the home page, show the login button
-			if (window.location.pathname.includes('/home/index.html')) {
+			if (window.location.pathname.includes('/home/')) {
 				const loginButton = document.createElement("button");
 				loginButton.id = "btn-login";
 				loginButton.textContent = "Log in";
@@ -98,7 +98,12 @@ auth0Script.onload = () => {
 				document.body.style.display = "block";
 			} else {
 				// If the user is not logged in and the current page is not the home page, redirect to the home page
-				window.location.href = '/home/index.html';
+				if (window.location.origin.indexOf('ngrok') !== -1) {
+					window.location.href = '/home/';
+				} else {
+					window.location.href = '/home/index.html';
+				}
+
 			}
 		}
 	});
