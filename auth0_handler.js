@@ -25,9 +25,22 @@ auth0Script.onload = () => {
 		console.log('isAuthenticated', isAuthenticated);
 
 		const authWrapper = document.createElement("div");
-		authWrapper.style.marginBottom = "10px";
-		authWrapper.style.minHeight = "73px";
-		authWrapper.style.marginLeft = "10px";
+		const authWrapperStyle = document.createElement("style");
+		authWrapperStyle.textContent = `
+			#auth-wrapper {
+				margin: 0 0 10px 0;
+				min-height: 73px;
+				margin-left: 10px;
+			}
+			@media (max-width: 768px) {
+				#auth-wrapper {
+					margin: 0;
+					min-height: 0;
+					margin-left: 0;
+				}
+			}
+		`;
+		document.head.appendChild(authWrapperStyle);
 		authWrapper.id = "auth-wrapper";
 
 		if (isAuthenticated) {
@@ -68,9 +81,39 @@ auth0Script.onload = () => {
 			if (document.querySelector(".auth-parent")) {
 				document.querySelector(".auth-parent").appendChild(authWrapper);
 			} else {
-				const sidebarContainer = document.querySelector("aside.nav")
-				// prepend the authWrapper to the sidebarContainer
-				sidebarContainer.prepend(authWrapper);
+				document.body.append(authWrapper);
+
+				const style = document.createElement("style");
+				style.textContent = `
+					#auth-wrapper {
+						position: absolute;
+						top: 70px;
+						right: 5px;
+						background-color: white;
+						padding: 10px;
+						border-radius: 5px;
+						box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+						z-index: 1000;
+						min-height: 0;
+					}
+					@media (max-width: 768px) {
+						#auth-wrapper {
+							display: flex;
+							flex-direction: row;
+							gap: 10px;
+						}
+						#auth-wrapper button {
+							height: 30px;
+						}
+						#auth-wrapper img {
+							margin: 0;
+						}
+						#user-profile {
+							height: 30px;
+						}
+					}
+				`;
+				document.head.appendChild(style);
 			}
 
 		} else {
@@ -84,6 +127,7 @@ auth0Script.onload = () => {
 				authWrapper.style.justifyContent = "center";
 				authWrapper.style.alignItems = "center";
 				authWrapper.style.gap = "10px";
+				authWrapper.style.marginTop = "20px";
 				authWrapper.innerHTML = 'Get started ';
 				authWrapper.appendChild(loginButton);
 
@@ -103,7 +147,6 @@ auth0Script.onload = () => {
 				} else {
 					window.location.href = '/home/index.html';
 				}
-
 			}
 		}
 	});
