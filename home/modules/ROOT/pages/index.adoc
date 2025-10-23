@@ -1,6 +1,28 @@
 = Welcome to ThoughtSpot Preview Documentation
 :page-layout: home
 
+This site is designed for customers to view draft documentation for the upcoming ThoughtSpot Cloud release. The documentation in this site is subject to change up until the release is rolled out to all customers.
+
+To access this site, you must have a user account. For more information, email mailto:docs@thoughtspot.com[ThoughtSpot Documentation].
 ++++
+<style>
+
+#okta-sign-in div.auth-parent .button {
+    width: 10%;
+    font-size: 16px;
+    font-family: 'Optimo-Plain', sans-serif !important;
+    color: white;
+    height: 43px;
+    border: 1px solid;
+    border-radius: 2.2857142857rem;
+    background: #2770ef;
+    padding: 0 1.7142857143rem;
+    border-color: initial;
+    box-shadow: none;
+    line-height: 1.4285714286;
+}
+
+</style>
+
 <div class="auth-parent" style="margin: 0 auto;"></div>
 ++++
