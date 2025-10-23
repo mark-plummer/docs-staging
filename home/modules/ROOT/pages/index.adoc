@@ -8,18 +8,18 @@ To access this site, you must have a user account. For more information, email m
 <style>
 
 #okta-sign-in div.auth-parent .button {
-    width: 10%;
-    font-size: 16px;
+    width: 10% !important;
+    font-size: 16px !important;
     font-family: 'Optimo-Plain', sans-serif !important;
-    color: white;
-    height: 43px;
-    border: 1px solid;
-    border-radius: 2.2857142857rem;
-    background: #2770ef;
-    padding: 0 1.7142857143rem;
-    border-color: initial;
-    box-shadow: none;
-    line-height: 1.4285714286;
+    color: white !important;
+    height: 43px !important;
+    border: 1px solid !important;
+    border-radius: 2.2857142857rem !important;
+    background: #2770ef !important;
+    padding: 0 1.7142857143rem !important;
+    border-color: initial !important;
+    box-shadow: none !important;
+    line-height: 1.4285714286 !important;
 }
 
 </style>
