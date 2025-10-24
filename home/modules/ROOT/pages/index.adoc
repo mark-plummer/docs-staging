@@ -8,7 +8,8 @@ To access this site, you must have a user account. For more information, email m
 <style>
 
 button#btn-login {
-    width: 10% !important;
+    width: 110px !important;
+    height: 40px;
     font-size: 16px !important;
     font-family: 'Optimo-Plain', sans-serif !important;
     color: white !important;
@@ -28,8 +29,8 @@ button#btn-login {
     margin-top: 20px;
     font-family: 'Optimo-Plain', sans-serif;
     margin-bottom: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size: 16px;
 }
 
