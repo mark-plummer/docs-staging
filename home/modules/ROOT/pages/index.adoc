@@ -22,6 +22,17 @@ button#btn-login {
     line-height: 1.4285714286 !important;
 }
 
+.home p {
+    /* margin: 0; */
+    color: #444;
+    margin-top: 20px;
+    font-family: 'Optimo-Plain', sans-serif;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 16px;
+}
+
 </style>
 
 <div class="auth-parent" style="margin: 0 auto;"></div>
