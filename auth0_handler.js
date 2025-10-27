@@ -15,9 +15,9 @@ auth0Script.onload = () => {
 		if (location.search.includes("state=") && 
 			(location.search.includes("code=") || 
 			location.search.includes("error="))) {
-			console.log('handleRedirectCallback');
+			console.log('handleRedirectCallback', window.location.pathname);
 			await auth0Client.handleRedirectCallback();
-			window.history.replaceState({}, document.title, "/");
+			window.history.replaceState({}, document.title, window.location.pathname);
 		}
 
 		const isAuthenticated = await auth0Client.isAuthenticated();
