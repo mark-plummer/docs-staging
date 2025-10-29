@@ -23,7 +23,7 @@ content:
   # dev docs branches
     branches: ['7.1.1-sw-docs', '7.2-sw-docs']
     start_path: docs/software
-    - url: git@github.com:thoughtspot/thoughtspot-docs.git
+  - url: git@github.com:thoughtspot/thoughtspot-docs.git
 ui:
   bundle:
     # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
