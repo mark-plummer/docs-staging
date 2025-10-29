@@ -14,8 +14,16 @@ content:
     start_path: home
   - url: git@github.com:thoughtspot/thoughtspot-docs.git
   # Cloud docs branches
-    branches: ['10.12.0.cl']
+    branches: ['10.11.0.cl', '10.12.0.cl']
     start_path: cloud/
+  - url: git@github.com:thoughtspot/thoughtspot-docs.git
+  # Software docs branches
+    branches: ['10.1.0.sw', '10.10.0.sw']
+    start_path: software/
+  # dev docs branches
+    branches: ['7.1.1-sw-docs', '7.2-sw-docs']
+    start_path: docs/software
+    - url: git@github.com:thoughtspot/thoughtspot-docs.git
 ui:
   bundle:
     # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
