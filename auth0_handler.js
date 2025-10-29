@@ -6,7 +6,7 @@ auth0Script.onload = () => {
 		domain: "dev-0hg062dftmmwr5em.us.auth0.com",
 		clientId: "Gr54npG45lJjwBtitl2P6bASh0VRIwq4",
 		authorizationParams: {
-			redirect_uri: window.location.origin + '/cloud/10.12.0.cl/'
+			redirect_uri: window.location.origin + '/home?loggedin=true'
 		}
 	}).then(async (auth0Client) => {
 
@@ -75,7 +75,11 @@ auth0Script.onload = () => {
 			});
 
 			if (window.location.pathname.includes('/home')) {
-				return window.location.href = '/cloud/10.12.0.cl/';
+				const sitemap = await fetch('/sitemap-cloud.xml');
+				const sitemapXml = await sitemap.text();
+				const urls = [...sitemapXml.matchAll(/<loc>.*?(\/cloud\/[^\/]+\/)/g)].map(match => match[1]);
+				window.location.href = urls[0];
+				return
 			}
 			
 			if (document.querySelector(".auth-parent")) {
