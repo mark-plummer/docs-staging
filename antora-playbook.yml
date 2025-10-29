@@ -20,10 +20,10 @@ content:
   # Software docs branches
     branches: ['10.1.0.sw', '10.10.0.sw']
     start_path: software/
+  - url: git@github.com:thoughtspot/thoughtspot-docs.git
   # dev docs branches
     branches: ['7.1.1-sw-docs', '7.2-sw-docs']
     start_path: docs/software
-  - url: git@github.com:thoughtspot/thoughtspot-docs.git
 ui:
   bundle:
     # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
