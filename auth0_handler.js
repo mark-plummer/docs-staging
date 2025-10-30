@@ -26,20 +26,7 @@ auth0Script.onload = () => {
 
 		const authWrapper = document.createElement("div");
 		const authWrapperStyle = document.createElement("style");
-		authWrapperStyle.textContent = `
-			#auth-wrapper {
-				margin: 0 0 10px 0;
-				min-height: 73px;
-				margin-left: 10px;
-			}
-			@media (max-width: 768px) {
-				#auth-wrapper {
-					margin: 0;
-					min-height: 0;
-					margin-left: 0;
-				}
-			}
-		`;
+
 		document.head.appendChild(authWrapperStyle);
 		authWrapper.id = "auth-wrapper";
 
@@ -52,7 +39,6 @@ auth0Script.onload = () => {
 			// Assumes an element with id "user-profile" in the DOM
 			const profileElement = document.createElement("div");
 			profileElement.id = "user-profile";
-			authWrapper.appendChild(profileElement);
 
 			profileElement.style.display = "block";
 			profileElement.style.display = "flex";
@@ -63,12 +49,25 @@ auth0Script.onload = () => {
 				<p>${user.name}</p>
 			`;
 
+			const authWrapperInner = document.createElement("div");
+			authWrapperInner.id = "auth-wrapper-inner";
+			authWrapper.appendChild(authWrapperInner);
+
+			const logoutToggleButton = document.createElement("button");
+			logoutToggleButton.id = "toggle-logout";
+			authWrapperInner.appendChild(logoutToggleButton);
+			logoutToggleButton.appendChild(profileElement);
+
+			logoutToggleButton.addEventListener("click", (e) => {
+				e.preventDefault();
+				authWrapperInner.classList.toggle('is-active');
+			});
+
 			const logoutButton = document.createElement("button");
 			logoutButton.id = "btn-logout";
 			logoutButton.textContent = "Log out";
-			authWrapper.appendChild(logoutButton);
+			authWrapperInner.appendChild(logoutButton);
 
-			logoutButton.style.display = "block";
 			logoutButton.addEventListener("click", (e) => {
 				e.preventDefault();
 				auth0Client.logout();
@@ -78,6 +77,7 @@ auth0Script.onload = () => {
 				const sitemap = await fetch('/sitemap-cloud.xml');
 				const sitemapXml = await sitemap.text();
 				const urls = [...sitemapXml.matchAll(/<loc>.*?(\/cloud\/[^\/]+\/)/g)].map(match => match[1]);
+				console.log('redirecting to', urls[0]);
 				window.location.href = urls[0];
 				return
 			}
@@ -85,34 +85,97 @@ auth0Script.onload = () => {
 			if (document.querySelector(".auth-parent")) {
 				document.querySelector(".auth-parent").appendChild(authWrapper);
 			} else {
-				document.body.append(authWrapper);
+				const toolbar = document.querySelector('main .toolbar')
+				toolbar.appendChild(authWrapper);
+				
+				// body.classList.add('has-body-auth-wrapper');
+				// document.body.append(authWrapper);
 
 				const style = document.createElement("style");
 				style.textContent = `
-					#auth-wrapper {
+
+					.toolbar #auth-wrapper button#toggle-logout {
+						color: inherit;
+						border: none;
+						outline: none;
+						line-height: inherit;
+						padding: 5px 1.5rem 5px 5px;
+						position: relative;
+						z-index: 3;
+						background: url(/_/img/chevron.svg) no-repeat;
+						background-position: right .5rem top 50%;
+						background-size: auto .75em;
+					}
+
+					.toolbar #auth-wrapper p, img {
+						margin: 0!important;
+					}
+
+					.toolbar #auth-wrapper-inner {
+						position: relative;
+						padding: 1px;
+						height: 42px;
+					}
+
+					.toolbar #auth-wrapper-inner.is-active {
+						display: flex;
+						min-width: 100%;
+						top: 14px;
+						flex-direction: column;
+						background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#f0f0f0)) no-repeat;
+						background: linear-gradient(180deg, #f0f0f0 0, #f0f0f0) no-repeat;
+						border-radius: 5px;
+						border: 1px solid #c8c8c8;
+						white-space: nowrap;
+						padding: 0;
+						height: 70px;
+						-webkit-box-shadow: 0 28px 45px rgba(0, 0, 0, .2);
+						box-shadow: 0 28px 45px rgba(0, 0, 0, .2);
+					}
+
+					.toolbar #auth-wrapper-inner.is-active #btn-logout {
+						display: block;
+					}
+
+					.toolbar #auth-wrapper button#btn-logout {
+						display: none;
 						position: absolute;
-						top: 70px;
-						right: 5px;
+						bottom: 4px;
+						left: 4px;
+						width: calc(100% - 8px);
+					}
+
+					.toolbar #auth-wrapper {
+					}
+
+					body > #auth-wrapper {
+						position: absolute;
+						top: 120px;
+						right: 23px;
 						background-color: white;
 						padding: 10px;
 						border-radius: 5px;
 						box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-						z-index: 1000;
+						z-index: 1;
 						min-height: 0;
 					}
 					@media (max-width: 768px) {
-						#auth-wrapper {
+						body.has-body-auth-wrapper main.article {
+							margin-top: 70px;
+						}
+						body > #auth-wrapper {
 							display: flex;
 							flex-direction: row;
 							gap: 10px;
+							top: 70px;
 						}
-						#auth-wrapper button {
+						body > #auth-wrapper button {
 							height: 30px;
 						}
-						#auth-wrapper img {
+						body > #auth-wrapper img {
 							margin: 0;
 						}
-						#user-profile {
+						body > #auth-wrapper #user-profile {
 							height: 30px;
 						}
 					}

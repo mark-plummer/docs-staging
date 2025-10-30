@@ -18,4 +18,9 @@
 			activeItem = activeItem.parentElement;
 		}
 	});
+
+	document.querySelector('.version-menu-toggle').addEventListener('click', (e) => {
+		e.preventDefault();
+		document.querySelector('.page-versions').classList.toggle('is-active');
+	});
 })();
