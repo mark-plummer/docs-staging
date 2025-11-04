@@ -23,4 +23,15 @@
 		e.preventDefault();
 		document.querySelector('.page-versions').classList.toggle('is-active');
 	});
+
+	document.body.addEventListener('click', (e) => {
+		// Check if clicked element is descendant of .page-versions or .auth-wrapper
+		if (e.target.closest('.page-versions') || e.target.closest('#auth-wrapper')) {
+			return;
+		}
+		// Close .page-versions if it is open
+		document.querySelector('.page-versions').classList.remove('is-active');
+		// Close .auth-wrapper if it is open
+		document.querySelector('#auth-wrapper-inner').classList.remove('is-active');
+	});
 })();

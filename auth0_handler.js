@@ -1,4 +1,5 @@
 const auth0Script = document.createElement('script')
+console.log('auth0_handler.js loaded');
 
 auth0Script.onload = () => {
 	console.log('auth0Script Loaded');
@@ -195,7 +196,6 @@ auth0Script.onload = () => {
 				authWrapper.style.alignItems = "center";
 				authWrapper.style.gap = "10px";
 				authWrapper.style.marginTop = "20px";
-				authWrapper.innerHTML = 'Get started ';
 				authWrapper.appendChild(loginButton);
 
 				loginButton.style.display = "block";
