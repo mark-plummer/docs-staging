@@ -1,11 +1,39 @@
 = Welcome to ThoughtSpot Preview Documentation
 :page-layout: home
 
-This site is designed for customers to view draft documentation for the upcoming ThoughtSpot Cloud release. The documentation in this site is subject to change up until the release is rolled out to all customers.
+++++
+<div class="intro">
+<p class="intro-text">This site is designed for customers to view draft documentation for the upcoming ThoughtSpot Cloud release. The documentation in this site is subject to change up until the release reaches general availability (GA).
 
-To access this site, you must have a user account. For more information, email mailto:docs@thoughtspot.com[ThoughtSpot Documentation].
+To access this site, you must have a user account. For more information, email <a href="mailto:docs@thoughtspot.com?subject=Access request for preview documentation site">ThoughtSpot Documentation</a>.</p>
+</div>
+++++
 ++++
 <style>
+
+.intro {
+  /* background-color: lightblue; */
+  /* padding: 20px; */
+  border-radius: 8px;
+}
+
+.intro-text {
+  font-size: 1.1em;
+  color: #666;
+}
+
+@media screen and (min-width: 1216px) {
+ .intro {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 375px) {
+    .intro {
+        text-align: left;
+        margin-left: 3px;
+    }
+}
 
 button#btn-login {
     width: 110px !important;
