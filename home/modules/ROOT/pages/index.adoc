@@ -18,20 +18,20 @@ To access this site, you must have a user account. For more information, email <
 }
 
 .intro-text {
-  font-size: 1.1em;
-  color: #666;
+  font-size: 1.1em !important;
+  color: #666 !important;
 }
 
 @media screen and (min-width: 1216px) {
  .intro {
-    text-align: center;
+    text-align: center !important;
   }
 }
 
 @media screen and (min-width: 375px) {
     .intro {
-        text-align: left;
-        margin-left: 3px;
+        text-align: left !important;
+        margin-left: 3px !important;
     }
 }
 
