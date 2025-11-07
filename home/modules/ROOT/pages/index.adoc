@@ -4,7 +4,6 @@
 ++++
 <div class="intro">
 <p class="intro-text">This site is designed for customers to view draft documentation for the upcoming ThoughtSpot Cloud release. The documentation in this site is subject to change up until the release reaches general availability (GA).</p>
-<br>
 <p class="intro-text">To access this site, you must have a user account. For more information, email <a href="mailto:docs@thoughtspot.com?subject=Access request for preview documentation site">ThoughtSpot Documentation</a>.</p>
 </div>
 ++++
@@ -24,14 +23,14 @@ endif::preview[]
     .home h1.page {
         font-size: 1.8rem;
         margin-top: 3.5rem;
-        text-align: center;
+        text-align: left;
     }
 }
 
 @media screen and (min-width: 375px) {
     .home #preamble, .home h1.page {
-        text-align: center !important;
-        margin-left: 13px;
+        text-align: left !important;
+        margin-left: 10%;
     }
 }
 
