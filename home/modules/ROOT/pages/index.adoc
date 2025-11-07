@@ -47,8 +47,14 @@ endif::preview[]
   text-align: left !important;
   margin-left: 10%;
   margin-right: 10%;
+  font-family: Optimo-Plain, sans-serif;
+  font-weight: 500;
 }
 
+div#auth-wrapper {
+  justify-content: left !important;
+  margin-left: 10% !important;
+}
 
 .intro-text {
   font-size: 1.1em !important;
