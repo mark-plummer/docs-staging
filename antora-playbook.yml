@@ -34,6 +34,7 @@ asciidoc:
     #software: true
     #cloud: false
     page-company: ThoughtSpot
+    preview:
     tabs: tabs
     support-url: https://community.thoughtspot.com/customers/s/contactsupport[ThoughtSpot Support^]
     seekwell: SeekWell
