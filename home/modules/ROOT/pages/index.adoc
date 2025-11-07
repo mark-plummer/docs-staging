@@ -8,8 +8,32 @@
 To access this site, you must have a user account. For more information, email <a href="mailto:docs@thoughtspot.com?subject=Access request for preview documentation site">ThoughtSpot Documentation</a>.</p>
 </div>
 ++++
+ifdef::preview[]
+This content is for preview site only.
+
+So much content in this section, I'd get confused reading the source without the closing `ifdef` directive.
+
+It isn't necessary for short blocks, but if you are conditionally including a section it may be something worth considering.
+
+Other readers reviewing your docs source code may go cross-eyed when reading your source docs if you don't.
+endif::preview[]
 ++++
 <style>
+
+@media screen and (min-width: 1216px) {
+    .home h1.page {
+        font-size: 1.8rem;
+        margin-top: 3.5rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .home #preamble, .home h1.page {
+        text-align: center !important;
+        margin-left: 13px;
+    }
+}
 
 .intro {
   /* background-color: lightblue; */
@@ -20,18 +44,19 @@ To access this site, you must have a user account. For more information, email <
 .intro-text {
   font-size: 1.1em !important;
   color: #666 !important;
+  line-height: 1.5em;
 }
 
 @media screen and (min-width: 1216px) {
  .intro {
-    text-align: center !important;
+    text-align: left !important;
   }
 }
 
 @media screen and (min-width: 375px) {
     .intro {
         text-align: left !important;
-        margin-left: 3px !important;
+        margin-left: 0px !important;
     }
 }
 
