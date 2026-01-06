@@ -8,10 +8,10 @@ auth0Script.onload = () => {
 		clientId: "Gr54npG45lJjwBtitl2P6bASh0VRIwq4",
 		authorizationParams: {
 			redirect_uri: window.location.origin + '/home?loggedin=true'
-		}
+		},
+		cacheLocation: 'localstorage',
+		useRefreshTokens: true
 	}).then(async (auth0Client) => {
-
-		console.log('auth0Client Loaded')
 
 		if (location.search.includes("state=") && 
 			(location.search.includes("code=") || 
@@ -23,13 +23,12 @@ auth0Script.onload = () => {
 
 		const isAuthenticated = await auth0Client.isAuthenticated();
 
-		console.log('isAuthenticated', isAuthenticated);
-
 		const authWrapper = document.createElement("div");
 		const authWrapperStyle = document.createElement("style");
 
 		document.head.appendChild(authWrapperStyle);
 		authWrapper.id = "auth-wrapper";
+
 
 		if (isAuthenticated) {
 			document.body.style.display = "block";
@@ -208,11 +207,15 @@ auth0Script.onload = () => {
 				document.querySelector(".auth-parent").appendChild(authWrapper);
 				document.body.style.display = "block";
 			} else {
-				// If the user is not logged in and the current page is not the home page, redirect to the home page
-				if (window.location.origin.indexOf('ngrok') !== -1) {
-					window.location.href = '/home';
+				if (navigator.userAgent.indexOf('Algolia Crawler') !== -1) {
+
 				} else {
-					window.location.href = '/home/index.html';
+					// If the user is not logged in and the current page is not the home page, redirect to the home page
+					if (window.location.origin.indexOf('ngrok') !== -1) {
+						window.location.href = '/home';
+					} else {
+						window.location.href = '/home/index.html';
+					}
 				}
 			}
 		}
