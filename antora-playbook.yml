@@ -14,7 +14,7 @@ content:
     start_path: home
   - url: git@github.com:thoughtspot/thoughtspot-docs.git
   # Cloud docs branches
-    branches: ['26.2.0.cl']
+    branches: ['26.3.0.cl']
     start_path: cloud/
   - url: git@github.com:thoughtspot/thoughtspot-docs.git
 ui:
@@ -27,7 +27,7 @@ asciidoc:
     #software: true
     #cloud: false
     page-company: ThoughtSpot
-    version: 26.2.0.cl
+    version: 26.3.0.cl
     tabs: tabs
     support-url: https://community.thoughtspot.com/customers/s/contactsupport[ThoughtSpot Support^]
     seekwell: SeekWell
