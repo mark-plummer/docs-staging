@@ -14,7 +14,7 @@ content:
     start_path: home
   - url: git@github.com:thoughtspot/thoughtspot-docs.git
   # Cloud docs branches
-    branches: ['26.3.0.cl']
+    branches: ['26.4.0.cl']
     start_path: cloud/
   - url: git@github.com:thoughtspot/thoughtspot-docs.git
 ui:
