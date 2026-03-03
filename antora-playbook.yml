@@ -27,7 +27,7 @@ asciidoc:
     #software: true
     #cloud: false
     page-company: ThoughtSpot
-    version: 26.3.0.cl
+    version: 26.4.0.cl
     tabs: tabs
     support-url: https://community.thoughtspot.com/customers/s/contactsupport[ThoughtSpot Support^]
     seekwell: SeekWell
