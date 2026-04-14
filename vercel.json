@@ -3,19 +3,19 @@
   "redirects": [
     {
       "source": "/cloud/latest/",
-      "destination": "/cloud/26.4.0.cl/",
+      "destination": "/cloud/26.5.0.cl/",
       "statusCode": 301 },
     {
       "source": "/cloud/latest",
-      "destination": "/cloud/26.4.0.cl/",
+      "destination": "/cloud/26.5.0.cl/",
       "statusCode": 301 },
     {
       "source": "/cloud/latest/:path*",
-      "destination": "/cloud/26.4.0.cl/:path*",
+      "destination": "/cloud/26.5.0.cl/:path*",
       "statusCode": 301 },
     {
-      "source": "/cloud/26.4.0.cl",
-      "destination": "/cloud/26.4.0.cl/",
+      "source": "/cloud/26.5.0.cl",
+      "destination": "/cloud/26.5.0.cl/",
       "statusCode": 301 }
   ],
   "headers": [
