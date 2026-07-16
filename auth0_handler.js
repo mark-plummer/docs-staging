@@ -28,7 +28,7 @@ auth0Script.onload = () => {
 
 		document.head.appendChild(authWrapperStyle);
 		authWrapper.id = "auth-wrapper";
-
+		let authParent = document.querySelector(".auth-parent");
 
 		if (isAuthenticated) {
 			document.body.style.display = "block";
@@ -81,120 +81,140 @@ auth0Script.onload = () => {
 				window.location.href = urls[0];
 				return
 			}
-			
-			if (document.querySelector(".auth-parent")) {
-				document.querySelector(".auth-parent").appendChild(authWrapper);
+
+			if (authParent) {
+				authParent.appendChild(authWrapper);
+			} else if (document.querySelector(".subnav")) {
+				authParent = document.createElement("div");
+				authParent.classList.add('auth-parent', 'v2');
+				document.querySelector(".subnav").appendChild(authParent);
+				authParent.appendChild(authWrapper);
 			} else {
 				const toolbar = document.querySelector('main .toolbar')
 				toolbar.appendChild(authWrapper);
-				
-				// body.classList.add('has-body-auth-wrapper');
-				// document.body.append(authWrapper);
-
-				const style = document.createElement("style");
-				style.textContent = `
-
-					.toolbar #auth-wrapper button#toggle-logout {
-						color: inherit;
-						border: none;
-						outline: none;
-						line-height: inherit;
-						padding: 5px 1.5rem 5px 5px;
-						position: relative;
-						z-index: 3;
-						background: url(/_/img/chevron.svg) no-repeat;
-						background-position: right .5rem top 50%;
-						background-size: auto .75em;
-					}
-
-					.toolbar #auth-wrapper p, img {
-						margin: 0!important;
-					}
-
-					.toolbar #auth-wrapper-inner {
-						position: relative;
-						padding: 1px;
-						height: 42px;
-					}
-
-					.toolbar #auth-wrapper-inner.is-active {
-						display: flex;
-						min-width: 100%;
-						top: 14px;
-						flex-direction: column;
-						background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#f0f0f0)) no-repeat;
-						background: linear-gradient(180deg, #f0f0f0 0, #f0f0f0) no-repeat;
-						border-radius: 5px;
-						border: 1px solid #c8c8c8;
-						white-space: nowrap;
-						padding: 0;
-						height: 70px;
-						-webkit-box-shadow: 0 28px 45px rgba(0, 0, 0, .2);
-						box-shadow: 0 28px 45px rgba(0, 0, 0, .2);
-					}
-
-					.toolbar #auth-wrapper-inner.is-active #btn-logout {
-						display: block;
-					}
-
-					.toolbar #auth-wrapper button#btn-logout {
-						display: none;
-						position: absolute;
-						bottom: 4px;
-						left: 4px;
-						width: calc(100% - 8px);
-					}
-
-					.toolbar #auth-wrapper {
-					}
-
-					body > #auth-wrapper {
-						position: absolute;
-						top: 120px;
-						right: 23px;
-						background-color: white;
-						padding: 10px;
-						border-radius: 5px;
-						box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-						z-index: 1;
-						min-height: 0;
-					}
-					@media (max-width: 768px) {
-						body.has-body-auth-wrapper main.article {
-							margin-top: 70px;
-						}
-						body > #auth-wrapper {
-							display: flex;
-							flex-direction: row;
-							gap: 10px;
-							top: 70px;
-						}
-						body > #auth-wrapper button {
-							height: 30px;
-						}
-						body > #auth-wrapper img {
-							margin: 0;
-						}
-						body > #auth-wrapper #user-profile {
-							height: 30px;
-						}
-					}
-				`;
-				document.head.appendChild(style);
 			}
+				
+			// body.classList.add('has-body-auth-wrapper');
+			// document.body.append(authWrapper);
+
+			const style = document.createElement("style");
+			style.textContent = `
+
+				.auth-parent.v2 {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 15px;
+				}
+
+				.auth-parent.v2 #auth-wrapper-inner:not(.is-active) p {
+					color: rgb(212, 212, 212);
+				}
+
+				#auth-wrapper button#toggle-logout {
+					color: inherit;
+					border: none;
+					outline: none;
+					line-height: inherit;
+					padding: 5px 1.5rem 5px 5px;
+					position: relative;
+					z-index: 3;
+					background: url(/_/img/chevron.svg) no-repeat;
+					background-position: right .5rem top 50%;
+					background-size: auto .75em;
+				}
+
+				#auth-wrapper p, img {
+					margin: 0!important;
+				}
+
+				#auth-wrapper-inner {
+					position: relative;
+					padding: 1px;
+					height: 42px;
+				}
+
+				#auth-wrapper-inner.is-active {
+					display: flex;
+					min-width: 100%;
+					top: 14px;
+					flex-direction: column;
+					background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#f0f0f0)) no-repeat;
+					background: linear-gradient(180deg, #f0f0f0 0, #f0f0f0) no-repeat;
+					border-radius: 5px;
+					border: 1px solid #c8c8c8;
+					white-space: nowrap;
+					padding: 0;
+					height: 70px;
+					-webkit-box-shadow: 0 28px 45px rgba(0, 0, 0, .2);
+					box-shadow: 0 28px 45px rgba(0, 0, 0, .2);
+				}
+
+				#auth-wrapper-inner.is-active #btn-logout {
+					display: block;
+				}
+
+				#auth-wrapper button#btn-logout {
+					display: none;
+					position: absolute;
+					bottom: 4px;
+					left: 4px;
+					width: calc(100% - 8px);
+				}
+
+				#auth-wrapper {
+				}
+
+				body > #auth-wrapper {
+					position: absolute;
+					top: 120px;
+					right: 23px;
+					background-color: white;
+					padding: 10px;
+					border-radius: 5px;
+					box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+					z-index: 1;
+					min-height: 0;
+				}
+				@media (max-width: 768px) {
+					body.has-body-auth-wrapper main.article {
+						margin-top: 70px;
+					}
+					body > #auth-wrapper {
+						display: flex;
+						flex-direction: row;
+						gap: 10px;
+						top: 70px;
+					}
+					body > #auth-wrapper button {
+						height: 30px;
+					}
+					body > #auth-wrapper img {
+						margin: 0;
+					}
+					body > #auth-wrapper #user-profile {
+						height: 30px;
+					}
+				}
+			`;
+			document.head.appendChild(style);
 
 		} else {
 			// If the user is not logged in and the current page is the home page, show the login button
-			if (window.location.pathname.includes('/home')) {
+			if (window.location.pathname.includes('/home') || window.location.search.includes('redirected=true')) {
 				const loginButton = document.createElement("button");
 				loginButton.id = "btn-login";
 				loginButton.textContent = "Log in";
+				loginButton.style.whiteSpace = "nowrap";
 
 				authWrapper.style.display = "flex";
 				authWrapper.style.justifyContent = "center";
 				authWrapper.style.alignItems = "center";
 				authWrapper.style.gap = "10px";
-				authWrapper.style.marginTop = "20px";
+				if (!authParent?.classList?.contains('v2')) {
+					authWrapper.style.marginTop = "20px";
+				}
+
 				authWrapper.appendChild(loginButton);
 
 				loginButton.style.display = "block";
@@ -204,7 +224,7 @@ auth0Script.onload = () => {
 					auth0Client.loginWithRedirect();
 				});
 
-				document.querySelector(".auth-parent").appendChild(authWrapper);
+				authParent.appendChild(authWrapper);
 				document.body.style.display = "block";
 			} else {
 				if (navigator.userAgent.indexOf('Algolia Crawler') !== -1) {
@@ -214,7 +234,11 @@ auth0Script.onload = () => {
 					if (window.location.origin.indexOf('ngrok') !== -1) {
 						window.location.href = '/home';
 					} else {
-						window.location.href = '/home/index.html';
+						if (window.location.host === 'localhost:5252') {
+							window.location.href = '/?redirected=true';
+						} else {
+							window.location.href = '/home/index.html';
+						}
 					}
 				}
 			}

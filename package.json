@@ -4,7 +4,9 @@
     "plain-install": "npm i --cache=.cache/npm --no-optional",
     "build": "antora antora-playbook.yml --stacktrace --fetch --clean",
     "postbuild": "copyfiles auth0_handler.js build/_/js/",
-    "preview": "python3 -m http.server --directory build && ngrok http --host-header=rewrite --subdomain=thoughtspotdocs localhost:8000"
+    "preview": "python3 -m http.server --directory build && ngrok http --host-header=rewrite --subdomain=thoughtspotdocs localhost:8000",
+    "ngrok": "ngrok http --host-header=rewrite --subdomain=thoughtspotdocs localhost:8000"
+
   },
   "devDependencies": {
     "antora": "^3.1.10"
