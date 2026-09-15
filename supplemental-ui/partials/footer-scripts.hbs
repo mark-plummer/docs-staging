@@ -96,44 +96,18 @@
                 }
         );
 
-        // BODY
-        if (window.location.pathname == '/home/') {
-            const bodySearchWrapper = document.createElement('div');
-            bodySearchWrapper.classList.add('algolia_search_wrapper');
-
-            document.querySelector('#preamble').prepend(bodySearchWrapper);
-
-            const bodyAlgoliaSearch = await new window.AlgoliaSearchComponent(
-                    bodySearchWrapper,
-                    {
-                        inline: true,
-                        filters: filters,
-                        firstResults: 'docs',
-                        showSections: ['docs'],
-                        docsIndexName: 'crawler_thoughtspot_preview_documentation',
-                        viewMoreFunction: (section, searchValue, instance) => {
-                            fullScreenSearchWrapper.style.display = 'block';
-                            fullScreenAlgoliaSearch.setQuery(searchValue);
-                            fullScreenAlgoliaSearch.viewMoreFilter(section);
-                            document.body.classList.add('full_screen_search_open');
-                            instance.api.closeSearchResults();
-
-                            // Key is refinement list class name. Value is value of element to click
-                            fullScreenAlgoliaSearch.selectFilters({
-                                deployment: _.get(filters, 'docs.deployment'),
-                                docs_version: _.get(filters, 'docs.version'),
-                            });
-                        },
-                    }
-            );
-        }
     }
 
     function awaitAlgolia() {
+        if (window.location.pathname === '/home/') return;
+
         if (window.AlgoliaSearchComponent) {
             initializeAlgolia();
         } else {
-            window.addEventListener('algoliaReady', initializeAlgolia);
+            const algoliaScript = document.createElement('script');
+            algoliaScript.src = 'https://scripts.thoughtspot.com/algolia_search.bundled.docs.js';
+            algoliaScript.onload = initializeAlgolia;
+            document.body.appendChild(algoliaScript);
         }
     }
 
