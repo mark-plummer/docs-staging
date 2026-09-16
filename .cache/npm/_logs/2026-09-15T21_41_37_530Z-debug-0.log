@@ -1,0 +1,537 @@
+0 verbose cli /Users/mark.plummer/.nvm/versions/node/v20.20.2/bin/node /Users/mark.plummer/.nvm/versions/node/v20.20.2/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.2
+3 silly config load:file:/Users/mark.plummer/.nvm/versions/node/v20.20.2/lib/node_modules/npm/npmrc
+4 warn config optional Use `--omit=optional` to exclude optional dependencies, or
+4 warn config `--include=optional` to include them.
+4 warn config
+4 warn config       Default value does install optional deps unless otherwise omitted.
+5 silly config load:file:/Users/mark.plummer/repos/docs-staging/.npmrc
+6 silly config load:file:/Users/mark.plummer/.npmrc
+7 silly config load:file:/Users/mark.plummer/.nvm/versions/node/v20.20.2/etc/npmrc
+8 verbose title npm install
+9 verbose argv "install" "--cache" ".cache/npm" "--no-optional"
+10 verbose logfile logs-max:10 dir:/Users/mark.plummer/repos/docs-staging/.cache/npm/_logs/2026-09-15T21_41_37_530Z-
+11 verbose logfile /Users/mark.plummer/repos/docs-staging/.cache/npm/_logs/2026-09-15T21_41_37_530Z-debug-0.log
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 verbose shrinkwrap failed to load node_modules/.package-lock.json missing from lockfile: node_modules/@pinojs/redact
+16 silly reify mark retired [
+16 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/antora',
+16 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/antora'
+16 silly reify ]
+17 silly reify mark retired [ '/Users/mark.plummer/repos/docs-staging/node_modules/buffer-crc32' ]
+18 silly reify mark retired [ '/Users/mark.plummer/repos/docs-staging/node_modules/commander' ]
+19 silly reify mark retired [
+19 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/isomorphic-git',
+19 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/isogit'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/js-yaml',
+20 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/js-yaml'
+20 silly reify ]
+21 silly reify mark retired [ '/Users/mark.plummer/repos/docs-staging/node_modules/mime-db' ]
+22 silly reify mark retired [ '/Users/mark.plummer/repos/docs-staging/node_modules/mime-types' ]
+23 silly reify mark retired [
+23 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/pino-abstract-transport'
+23 silly reify ]
+24 silly reify mark retired [
+24 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/pino',
+24 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/pino'
+24 silly reify ]
+25 silly reify mark retired [
+25 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/process-warning'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/readable-stream'
+26 silly reify ]
+27 silly reify mark retired [ '/Users/mark.plummer/repos/docs-staging/node_modules/sonic-boom' ]
+28 silly reify mark retired [ '/Users/mark.plummer/repos/docs-staging/node_modules/thread-stream' ]
+29 silly reify mark retired [ '/Users/mark.plummer/repos/docs-staging/node_modules/yazl' ]
+30 silly reify mark retired [
+30 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/cli',
+30 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/antora'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/asciidoc-loader'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/content-classifier'
+32 silly reify ]
+33 silly reify mark retired [ '/Users/mark.plummer/repos/docs-staging/node_modules/yauzl' ]
+34 silly reify mark retired [
+34 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/content-aggregator'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/file-publisher'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/document-converter'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/logger'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/navigation-builder'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/page-composer'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/site-generator'
+40 silly reify ]
+41 silly reify mark retired [
+41 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/playbook-builder'
+41 silly reify ]
+42 silly reify mark retired [
+42 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/redirect-producer'
+42 silly reify ]
+43 silly reify mark retired [
+43 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/site-publisher'
+43 silly reify ]
+44 silly reify mark retired [
+44 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/site-mapper'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/ui-loader'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@pinojs/redact'
+46 silly reify ]
+47 silly reify moves {
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/antora': '/Users/mark.plummer/repos/docs-staging/node_modules/.antora-hDd3wjBg',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/antora': '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/.antora-NLlpdAI1',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/buffer-crc32': '/Users/mark.plummer/repos/docs-staging/node_modules/.buffer-crc32-bnS0kqqI',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/commander': '/Users/mark.plummer/repos/docs-staging/node_modules/.commander-xdHl19Nr',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/isomorphic-git': '/Users/mark.plummer/repos/docs-staging/node_modules/.isomorphic-git-CbXaN4Ug',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/isogit': '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/.isogit-Bm7eNSEP',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/js-yaml': '/Users/mark.plummer/repos/docs-staging/node_modules/.js-yaml-5SdC4Fhy',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/js-yaml': '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/.js-yaml-8ByqkX43',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/mime-db': '/Users/mark.plummer/repos/docs-staging/node_modules/.mime-db-3qcN8K4N',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/mime-types': '/Users/mark.plummer/repos/docs-staging/node_modules/.mime-types-rMg6yBRP',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/pino-abstract-transport': '/Users/mark.plummer/repos/docs-staging/node_modules/.pino-abstract-transport-JnNv806B',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/pino': '/Users/mark.plummer/repos/docs-staging/node_modules/.pino-hDR6BYnd',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/pino': '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/.pino-x6m0c98H',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/process-warning': '/Users/mark.plummer/repos/docs-staging/node_modules/.process-warning-Pglcnvxu',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/readable-stream': '/Users/mark.plummer/repos/docs-staging/node_modules/.readable-stream-vCbmvR42',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/sonic-boom': '/Users/mark.plummer/repos/docs-staging/node_modules/.sonic-boom-r8lel1rU',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/thread-stream': '/Users/mark.plummer/repos/docs-staging/node_modules/.thread-stream-nqIcmLS9',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/yazl': '/Users/mark.plummer/repos/docs-staging/node_modules/.yazl-Lm0alEvZ',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/cli': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.cli-uGM5Mwew',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/asciidoc-loader': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.asciidoc-loader-KiMMwN8i',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/content-classifier': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.content-classifier-oO5SPPY4',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/yauzl': '/Users/mark.plummer/repos/docs-staging/node_modules/.yauzl-B3GpizaX',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/content-aggregator': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.content-aggregator-RsXR3egj',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/file-publisher': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.file-publisher-px3k0YVj',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/document-converter': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.document-converter-v4BJoSoa',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/logger': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.logger-GybScgHj',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/navigation-builder': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.navigation-builder-xNpNNZ9V',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/page-composer': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.page-composer-8FTOF0tb',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/site-generator': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.site-generator-g7dQajNg',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/playbook-builder': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.playbook-builder-YQOmS9vS',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/redirect-producer': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.redirect-producer-oaZIlKZI',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/site-publisher': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.site-publisher-RElNLRWx',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/site-mapper': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.site-mapper-bZaEtFGt',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/ui-loader': '/Users/mark.plummer/repos/docs-staging/node_modules/@antora/.ui-loader-cerTUH1y',
+47 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/@pinojs/redact': '/Users/mark.plummer/repos/docs-staging/node_modules/@pinojs/.redact-jS5m2AT3'
+47 silly reify }
+48 silly reify mark deleted [
+48 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/uglify-js',
+48 silly reify   '/Users/mark.plummer/repos/docs-staging/node_modules/.bin/uglifyjs'
+48 silly reify ]
+49 silly audit bulk request {
+49 silly audit   '@antora/asciidoc-loader': [ '3.1.12' ],
+49 silly audit   '@antora/cli': [ '3.1.12' ],
+49 silly audit   '@antora/content-aggregator': [ '3.1.12' ],
+49 silly audit   '@antora/content-classifier': [ '3.1.12' ],
+49 silly audit   '@antora/document-converter': [ '3.1.12' ],
+49 silly audit   '@antora/expand-path-helper': [ '3.0.0' ],
+49 silly audit   '@antora/file-publisher': [ '3.1.12' ],
+49 silly audit   '@antora/logger': [ '3.1.12' ],
+49 silly audit   '@antora/navigation-builder': [ '3.1.12' ],
+49 silly audit   '@antora/page-composer': [ '3.1.12' ],
+49 silly audit   '@antora/playbook-builder': [ '3.1.12' ],
+49 silly audit   '@antora/redirect-producer': [ '3.1.12' ],
+49 silly audit   '@antora/site-generator': [ '3.1.12' ],
+49 silly audit   '@antora/site-mapper': [ '3.1.12' ],
+49 silly audit   '@antora/site-publisher': [ '3.1.12' ],
+49 silly audit   '@antora/ui-loader': [ '3.1.12' ],
+49 silly audit   '@antora/user-require-helper': [ '3.0.0' ],
+49 silly audit   '@asciidoctor/core': [ '2.2.9' ],
+49 silly audit   '@asciidoctor/tabs': [ '1.0.0-beta.6' ],
+49 silly audit   '@iarna/toml': [ '2.2.5' ],
+49 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+49 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+49 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+49 silly audit   'abort-controller': [ '3.0.0' ],
+49 silly audit   'ansi-regex': [ '5.0.1' ],
+49 silly audit   'ansi-styles': [ '4.3.0' ],
+49 silly audit   antora: [ '3.1.12' ],
+49 silly audit   argparse: [ '2.0.1' ],
+49 silly audit   'asciidoctor-opal-runtime': [ '0.3.4' ],
+49 silly audit   'async-lock': [ '1.4.1' ],
+49 silly audit   'atomic-sleep': [ '1.0.0' ],
+49 silly audit   'available-typed-arrays': [ '1.0.7' ],
+49 silly audit   b4a: [ '1.9.0' ],
+49 silly audit   'balanced-match': [ '1.0.2' ],
+49 silly audit   'bare-events': [ '2.9.2' ],
+49 silly audit   'base64-js': [ '1.5.1' ],
+49 silly audit   'brace-expansion': [ '1.1.21' ],
+49 silly audit   braces: [ '3.0.3' ],
+49 silly audit   buffer: [ '6.0.3' ],
+49 silly audit   'buffer-crc32': [ '0.2.13' ],
+49 silly audit   'cache-directory': [ '2.0.0' ],
+49 silly audit   'call-bind': [ '1.0.9' ],
+49 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+49 silly audit   'call-bound': [ '1.0.4' ],
+49 silly audit   'clean-git-ref': [ '2.0.1' ],
+49 silly audit   cliui: [ '7.0.4' ],
+49 silly audit   clone: [ '2.1.2' ],
+49 silly audit   'color-convert': [ '2.0.1' ],
+49 silly audit   'color-name': [ '1.1.4' ],
+49 silly audit   colorette: [ '2.0.20' ],
+49 silly audit   commander: [ '11.1.0' ],
+49 silly audit   'concat-map': [ '0.0.1' ],
+49 silly audit   convict: [ '6.2.5' ],
+49 silly audit   copyfiles: [ '2.4.1' ],
+49 silly audit   'core-util-is': [ '1.0.3' ],
+49 silly audit   'crc-32': [ '1.2.2' ],
+49 silly audit   dateformat: [ '4.6.3' ],
+49 silly audit   'decompress-response': [ '6.0.0' ],
+49 silly audit   'define-data-property': [ '1.1.4' ],
+49 silly audit   diff3: [ '0.0.3' ],
+49 silly audit   'dunder-proto': [ '1.0.1' ],
+49 silly audit   'emoji-regex': [ '8.0.0' ],
+49 silly audit   'end-of-stream': [ '1.4.5' ],
+49 silly audit   'es-define-property': [ '1.0.1' ],
+49 silly audit   'es-errors': [ '1.3.0' ],
+49 silly audit   'es-object-atoms': [ '1.1.2' ],
+49 silly audit   escalade: [ '3.2.0' ],
+49 silly audit   'event-target-shim': [ '5.0.1' ],
+49 silly audit   events: [ '3.3.0' ],
+49 silly audit   'events-universal': [ '1.0.1' ],
+49 silly audit   'fast-copy': [ '3.1.0' ],
+49 silly audit   'fast-fifo': [ '1.3.2' ],
+49 silly audit   'fast-glob': [ '3.3.3' ],
+49 silly audit   'fast-redact': [ '3.5.0' ],
+49 silly audit   'fast-safe-stringify': [ '2.1.1' ],
+49 silly audit   fastq: [ '1.20.3' ],
+49 silly audit   'fill-range': [ '7.1.1' ],
+49 silly audit   'for-each': [ '0.3.5' ],
+49 silly audit   'fs.realpath': [ '1.0.0' ],
+49 silly audit   'function-bind': [ '1.1.2' ],
+49 silly audit   'get-caller-file': [ '2.0.5' ],
+49 silly audit   'get-intrinsic': [ '1.3.0' ],
+49 silly audit   'get-proto': [ '1.0.1' ],
+49 silly audit   glob: [ '7.2.3' ],
+49 silly audit   'glob-parent': [ '5.1.2' ],
+49 silly audit   gopd: [ '1.2.0' ],
+49 silly audit   handlebars: [ '4.7.9' ],
+49 silly audit   'has-property-descriptors': [ '1.0.2' ],
+49 silly audit   'has-symbols': [ '1.1.0' ],
+49 silly audit   'has-tostringtag': [ '1.0.2' ],
+49 silly audit   hasown: [ '2.0.4' ],
+49 silly audit   'help-me': [ '5.0.0' ],
+49 silly audit   hpagent: [ '1.2.0' ],
+49 silly audit   ieee754: [ '1.2.1' ],
+49 silly audit   ignore: [ '5.3.2' ],
+49 silly audit   inflight: [ '1.0.6' ],
+49 silly audit   inherits: [ '2.0.4' ],
+49 silly audit   'is-callable': [ '1.2.7' ],
+49 silly audit   'is-extglob': [ '2.1.1' ],
+49 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+49 silly audit   'is-glob': [ '4.0.3' ],
+49 silly audit   'is-number': [ '7.0.0' ],
+49 silly audit   'is-typed-array': [ '1.1.15' ],
+49 silly audit   isarray: [ '2.0.5', '0.0.1', '1.0.0' ],
+49 silly audit   'isomorphic-git': [ '1.25.10' ],
+49 silly audit   joycon: [ '3.1.1' ],
+49 silly audit   'js-yaml': [ '4.1.1' ],
+49 silly audit   json5: [ '2.2.3' ],
+49 silly audit   'lodash.clonedeep': [ '4.5.0' ],
+49 silly audit   'math-intrinsics': [ '1.1.0' ],
+49 silly audit   merge2: [ '1.4.1' ],
+49 silly audit   micromatch: [ '4.0.8' ],
+49 silly audit   picomatch: [ '2.3.2', '4.0.7' ],
+49 silly audit   'mime-db': [ '1.52.0' ],
+49 silly audit   'mime-types': [ '2.1.35' ],
+49 silly audit   'mimic-response': [ '3.1.0' ],
+49 silly audit   minimatch: [ '3.1.5' ],
+49 silly audit   minimist: [ '1.2.8' ],
+49 silly audit   minimisted: [ '2.0.1' ],
+49 silly audit   mkdirp: [ '1.0.4' ],
+49 silly audit   'multi-progress': [ '4.0.0' ],
+49 silly audit   'neo-async': [ '2.6.2' ],
+49 silly audit   noms: [ '0.0.0' ],
+49 silly audit   'readable-stream': [ '1.0.34', '4.7.0', '3.6.2', '2.3.8' ],
+49 silly audit   string_decoder: [ '0.10.31', '1.3.0', '1.1.1' ],
+49 silly audit   'on-exit-leak-free': [ '2.1.2' ],
+49 silly audit   once: [ '1.4.0' ],
+49 silly audit   pako: [ '1.0.11' ],
+49 silly audit   'particles.js': [ '2.0.0' ],
+49 silly audit   'path-is-absolute': [ '1.0.1' ],
+49 silly audit   pend: [ '1.2.0' ],
+49 silly audit   pify: [ '4.0.1' ],
+49 silly audit   pino: [ '9.2.0' ],
+49 silly audit   'pino-abstract-transport': [ '1.2.0' ],
+49 silly audit   'pino-pretty': [ '11.2.2' ],
+49 silly audit   'pino-std-serializers': [ '7.1.0' ],
+49 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+49 silly audit   process: [ '0.11.10' ],
+49 silly audit   'process-nextick-args': [ '2.0.1' ],
+49 silly audit   'process-warning': [ '3.0.0' ],
+49 silly audit   progress: [ '2.0.3' ],
+49 silly audit   pump: [ '3.0.4' ],
+49 silly audit   'queue-microtask': [ '1.2.3' ],
+49 silly audit   'quick-format-unescaped': [ '4.0.4' ],
+49 silly audit   'real-require': [ '0.2.0' ],
+49 silly audit   'remove-trailing-separator': [ '1.1.0' ],
+49 silly audit   'replace-ext': [ '2.0.0' ],
+49 silly audit   'require-directory': [ '2.1.1' ],
+49 silly audit   'require-from-string': [ '2.0.2' ],
+49 silly audit   reusify: [ '1.1.0' ],
+49 silly audit   'run-parallel': [ '1.2.0' ],
+49 silly audit   'safe-buffer': [ '5.2.1', '5.1.2' ],
+49 silly audit   'safe-stable-stringify': [ '2.5.0' ],
+49 silly audit   'secure-json-parse': [ '2.7.0' ],
+49 silly audit   'set-function-length': [ '1.2.2' ],
+49 silly audit   'sha.js': [ '2.4.12' ],
+49 silly audit   'should-proxy': [ '1.0.4' ],
+49 silly audit   'simple-concat': [ '1.0.1' ],
+49 silly audit   'simple-get': [ '4.0.1' ],
+49 silly audit   'sonic-boom': [ '4.0.1' ],
+49 silly audit   'source-map': [ '0.6.1' ],
+49 silly audit   split2: [ '4.2.0' ],
+49 silly audit   streamx: [ '2.28.1' ],
+49 silly audit   'string-width': [ '4.2.3' ],
+49 silly audit   'strip-ansi': [ '6.0.1' ],
+49 silly audit   'strip-json-comments': [ '3.1.1' ],
+49 silly audit   teex: [ '1.0.1' ],
+49 silly audit   'text-decoder': [ '1.2.7' ],
+49 silly audit   'thread-stream': [ '3.2.0' ],
+49 silly audit   through2: [ '2.0.5' ],
+49 silly audit   'to-buffer': [ '1.2.2' ],
+49 silly audit   'to-regex-range': [ '5.0.1' ],
+49 silly audit   'typed-array-buffer': [ '1.0.3' ],
+49 silly audit   untildify: [ '4.0.0' ],
+49 silly audit   unxhr: [ '1.2.0' ],
+49 silly audit   'util-deprecate': [ '1.0.2' ],
+49 silly audit   vinyl: [ '3.0.1' ],
+49 silly audit   'which-typed-array': [ '1.1.22' ],
+49 silly audit   wordwrap: [ '1.0.0' ],
+49 silly audit   'wrap-ansi': [ '7.0.0' ],
+49 silly audit   wrappy: [ '1.0.2' ],
+49 silly audit   'xdg-basedir': [ '3.0.0' ],
+49 silly audit   xtend: [ '4.0.2' ],
+49 silly audit   y18n: [ '5.0.8' ],
+49 silly audit   yargs: [ '16.2.2' ],
+49 silly audit   'yargs-parser': [ '20.2.9' ],
+49 silly audit   yauzl: [ '3.1.3' ],
+49 silly audit   yazl: [ '2.5.1' ]
+49 silly audit }
+50 silly tarball no local data for strip-json-comments@https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz. Extracting by manifest.
+51 silly tarball no local data for secure-json-parse@https://registry.npmjs.org/secure-json-parse/-/secure-json-parse-2.7.0.tgz. Extracting by manifest.
+52 silly tarball no local data for pump@https://registry.npmjs.org/pump/-/pump-3.0.4.tgz. Extracting by manifest.
+53 silly tarball no local data for require-from-string@https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz. Extracting by manifest.
+54 silly tarball no local data for joycon@https://registry.npmjs.org/joycon/-/joycon-3.1.1.tgz. Extracting by manifest.
+55 silly tarball no local data for pino-pretty@https://registry.npmjs.org/pino-pretty/-/pino-pretty-11.2.2.tgz. Extracting by manifest.
+56 silly tarball no local data for fast-safe-stringify@https://registry.npmjs.org/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz. Extracting by manifest.
+57 silly tarball no local data for help-me@https://registry.npmjs.org/help-me/-/help-me-5.0.0.tgz. Extracting by manifest.
+58 silly tarball no local data for fast-redact@https://registry.npmjs.org/fast-redact/-/fast-redact-3.5.0.tgz. Extracting by manifest.
+59 silly tarball no local data for fast-copy@https://registry.npmjs.org/fast-copy/-/fast-copy-3.1.0.tgz. Extracting by manifest.
+60 silly tarball no local data for end-of-stream@https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz. Extracting by manifest.
+61 silly tarball no local data for dateformat@https://registry.npmjs.org/dateformat/-/dateformat-4.6.3.tgz. Extracting by manifest.
+62 silly tarball no local data for @antora/ui-loader@https://registry.npmjs.org/@antora/ui-loader/-/ui-loader-3.1.12.tgz. Extracting by manifest.
+63 silly tarball no local data for colorette@https://registry.npmjs.org/colorette/-/colorette-2.0.20.tgz. Extracting by manifest.
+64 silly tarball no local data for @antora/site-mapper@https://registry.npmjs.org/@antora/site-mapper/-/site-mapper-3.1.12.tgz. Extracting by manifest.
+65 silly tarball no local data for @antora/site-publisher@https://registry.npmjs.org/@antora/site-publisher/-/site-publisher-3.1.12.tgz. Extracting by manifest.
+66 silly tarball no local data for @antora/redirect-producer@https://registry.npmjs.org/@antora/redirect-producer/-/redirect-producer-3.1.12.tgz. Extracting by manifest.
+67 silly tarball no local data for @antora/playbook-builder@https://registry.npmjs.org/@antora/playbook-builder/-/playbook-builder-3.1.12.tgz. Extracting by manifest.
+68 silly tarball no local data for @antora/site-generator@https://registry.npmjs.org/@antora/site-generator/-/site-generator-3.1.12.tgz. Extracting by manifest.
+69 silly tarball no local data for @antora/page-composer@https://registry.npmjs.org/@antora/page-composer/-/page-composer-3.1.12.tgz. Extracting by manifest.
+70 silly tarball no local data for @antora/navigation-builder@https://registry.npmjs.org/@antora/navigation-builder/-/navigation-builder-3.1.12.tgz. Extracting by manifest.
+71 silly tarball no local data for @antora/logger@https://registry.npmjs.org/@antora/logger/-/logger-3.1.12.tgz. Extracting by manifest.
+72 silly tarball no local data for @antora/file-publisher@https://registry.npmjs.org/@antora/file-publisher/-/file-publisher-3.1.12.tgz. Extracting by manifest.
+73 silly tarball no local data for @antora/document-converter@https://registry.npmjs.org/@antora/document-converter/-/document-converter-3.1.12.tgz. Extracting by manifest.
+74 silly tarball no local data for yauzl@https://registry.npmjs.org/yauzl/-/yauzl-3.1.3.tgz. Extracting by manifest.
+75 silly tarball no local data for @antora/content-aggregator@https://registry.npmjs.org/@antora/content-aggregator/-/content-aggregator-3.1.12.tgz. Extracting by manifest.
+76 silly tarball no local data for @antora/asciidoc-loader@https://registry.npmjs.org/@antora/asciidoc-loader/-/asciidoc-loader-3.1.12.tgz. Extracting by manifest.
+77 silly tarball no local data for @antora/cli@https://registry.npmjs.org/@antora/cli/-/cli-3.1.12.tgz. Extracting by manifest.
+78 silly tarball no local data for yazl@https://registry.npmjs.org/yazl/-/yazl-2.5.1.tgz. Extracting by manifest.
+79 silly tarball no local data for readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz. Extracting by manifest.
+80 silly tarball no local data for sonic-boom@https://registry.npmjs.org/sonic-boom/-/sonic-boom-4.0.1.tgz. Extracting by manifest.
+81 silly tarball no local data for process-warning@https://registry.npmjs.org/process-warning/-/process-warning-3.0.0.tgz. Extracting by manifest.
+82 silly tarball no local data for pino@https://registry.npmjs.org/pino/-/pino-9.2.0.tgz. Extracting by manifest.
+83 silly tarball no local data for pino-abstract-transport@https://registry.npmjs.org/pino-abstract-transport/-/pino-abstract-transport-1.2.0.tgz. Extracting by manifest.
+84 silly tarball no local data for mime-types@https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz. Extracting by manifest.
+85 silly tarball no local data for mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz. Extracting by manifest.
+86 silly tarball no local data for js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz. Extracting by manifest.
+87 silly tarball no local data for isomorphic-git@https://registry.npmjs.org/isomorphic-git/-/isomorphic-git-1.25.10.tgz. Extracting by manifest.
+88 silly tarball no local data for commander@https://registry.npmjs.org/commander/-/commander-11.1.0.tgz. Extracting by manifest.
+89 silly tarball no local data for buffer-crc32@https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.13.tgz. Extracting by manifest.
+90 silly tarball no local data for @antora/content-classifier@https://registry.npmjs.org/@antora/content-classifier/-/content-classifier-3.1.12.tgz. Extracting by manifest.
+91 silly tarball no local data for thread-stream@https://registry.npmjs.org/thread-stream/-/thread-stream-3.2.0.tgz. Extracting by manifest.
+92 silly tarball no local data for antora@https://registry.npmjs.org/antora/-/antora-3.1.12.tgz. Extracting by manifest.
+93 silly tarball no local data for readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-4.7.0.tgz. Extracting by manifest.
+94 silly tarball no local data for readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-4.7.0.tgz. Extracting by manifest.
+95 http fetch GET 200 https://registry.npmjs.org/pump/-/pump-3.0.4.tgz 250ms (cache miss)
+96 http fetch GET 200 https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz 251ms (cache miss)
+97 http fetch GET 200 https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz 250ms (cache miss)
+98 http fetch GET 200 https://registry.npmjs.org/colorette/-/colorette-2.0.20.tgz 251ms (cache miss)
+99 http fetch GET 200 https://registry.npmjs.org/secure-json-parse/-/secure-json-parse-2.7.0.tgz 254ms (cache miss)
+100 http fetch GET 200 https://registry.npmjs.org/help-me/-/help-me-5.0.0.tgz 254ms (cache miss)
+101 http fetch GET 200 https://registry.npmjs.org/fast-redact/-/fast-redact-3.5.0.tgz 257ms (cache miss)
+102 http fetch GET 200 https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz 275ms (cache miss)
+103 http fetch GET 200 https://registry.npmjs.org/dateformat/-/dateformat-4.6.3.tgz 275ms (cache miss)
+104 http fetch GET 200 https://registry.npmjs.org/joycon/-/joycon-3.1.1.tgz 279ms (cache miss)
+105 http fetch GET 200 https://registry.npmjs.org/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz 286ms (cache miss)
+106 http fetch GET 200 https://registry.npmjs.org/pino-pretty/-/pino-pretty-11.2.2.tgz 292ms (cache miss)
+107 http fetch GET 200 https://registry.npmjs.org/@antora/ui-loader/-/ui-loader-3.1.12.tgz 297ms (cache miss)
+108 http fetch GET 200 https://registry.npmjs.org/fast-copy/-/fast-copy-3.1.0.tgz 301ms (cache miss)
+109 http fetch GET 200 https://registry.npmjs.org/@antora/site-mapper/-/site-mapper-3.1.12.tgz 302ms (cache miss)
+110 http fetch GET 200 https://registry.npmjs.org/@antora/site-publisher/-/site-publisher-3.1.12.tgz 309ms (cache miss)
+111 http fetch GET 200 https://registry.npmjs.org/@antora/redirect-producer/-/redirect-producer-3.1.12.tgz 309ms (cache miss)
+112 http fetch GET 200 https://registry.npmjs.org/yauzl/-/yauzl-3.1.3.tgz 313ms (cache miss)
+113 http fetch GET 200 https://registry.npmjs.org/@antora/playbook-builder/-/playbook-builder-3.1.12.tgz 315ms (cache miss)
+114 http fetch GET 200 https://registry.npmjs.org/@antora/site-generator/-/site-generator-3.1.12.tgz 322ms (cache miss)
+115 http fetch GET 200 https://registry.npmjs.org/@antora/navigation-builder/-/navigation-builder-3.1.12.tgz 330ms (cache miss)
+116 http fetch GET 200 https://registry.npmjs.org/@antora/page-composer/-/page-composer-3.1.12.tgz 343ms (cache miss)
+117 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 385ms
+118 silly audit report {
+118 silly audit report   'js-yaml': [
+118 silly audit report     {
+118 silly audit report       id: 1121860,
+118 silly audit report       url: 'https://github.com/advisories/GHSA-h67p-54hq-rp68',
+118 silly audit report       title: 'JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases',
+118 silly audit report       severity: 'moderate',
+118 silly audit report       vulnerable_versions: '>=4.0.0 <=4.1.1',
+118 silly audit report       cwe: [Array],
+118 silly audit report       cvss: [Object]
+118 silly audit report     },
+118 silly audit report     {
+118 silly audit report       id: 1123911,
+118 silly audit report       url: 'https://github.com/advisories/GHSA-52cp-r559-cp3m',
+118 silly audit report       title: 'js-yaml: YAML merge-key chains can force quadratic CPU consumption',
+118 silly audit report       severity: 'high',
+118 silly audit report       vulnerable_versions: '>=4.0.0 <4.3.0',
+118 silly audit report       cwe: [Array],
+118 silly audit report       cvss: [Object]
+118 silly audit report     },
+118 silly audit report     {
+118 silly audit report       id: 1138115,
+118 silly audit report       url: 'https://github.com/advisories/GHSA-5p4m-2wfm-xmqj',
+118 silly audit report       title: 'JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported',
+118 silly audit report       severity: 'high',
+118 silly audit report       vulnerable_versions: '>=4.0.0 <4.3.1',
+118 silly audit report       cwe: [Array],
+118 silly audit report       cvss: [Object]
+118 silly audit report     },
+118 silly audit report     {
+118 silly audit report       id: 1193727,
+118 silly audit report       url: 'https://github.com/advisories/GHSA-2883-xcg3-v3hh',
+118 silly audit report       title: 'js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources',
+118 silly audit report       severity: 'high',
+118 silly audit report       vulnerable_versions: '>=4.0.0 <4.3.2',
+118 silly audit report       cwe: [Array],
+118 silly audit report       cvss: [Object]
+118 silly audit report     }
+118 silly audit report   ]
+118 silly audit report }
+119 silly packumentCache corgi:https://registry.npmjs.org/js-yaml cache-miss
+120 http fetch GET 200 https://registry.npmjs.org/yazl/-/yazl-2.5.1.tgz 348ms (cache miss)
+121 http fetch GET 200 https://registry.npmjs.org/js-yaml 21ms (cache hit)
+122 silly packumentCache corgi:https://registry.npmjs.org/js-yaml set size:77983 disposed:false
+123 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fcontent-aggregator cache-miss
+124 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fplaybook-builder cache-miss
+125 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fui-loader cache-miss
+126 http fetch GET 200 https://registry.npmjs.org/@antora/file-publisher/-/file-publisher-3.1.12.tgz 383ms (cache miss)
+127 http fetch GET 200 https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz 382ms (cache miss)
+128 http fetch GET 200 https://registry.npmjs.org/process-warning/-/process-warning-3.0.0.tgz 385ms (cache miss)
+129 http fetch GET 200 https://registry.npmjs.org/@antora/document-converter/-/document-converter-3.1.12.tgz 393ms (cache miss)
+130 http fetch GET 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz 394ms (cache miss)
+131 http fetch GET 200 https://registry.npmjs.org/pino-abstract-transport/-/pino-abstract-transport-1.2.0.tgz 401ms (cache miss)
+132 http fetch GET 200 https://registry.npmjs.org/@antora%2fcontent-aggregator 34ms (cache hit)
+133 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fcontent-aggregator set size:147471 disposed:false
+134 http fetch GET 200 https://registry.npmjs.org/@antora%2fplaybook-builder 35ms (cache hit)
+135 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fplaybook-builder set size:125562 disposed:false
+136 http fetch GET 200 https://registry.npmjs.org/@antora%2fui-loader 37ms (cache hit)
+137 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fui-loader set size:137799 disposed:false
+138 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fsite-generator cache-miss
+139 http fetch GET 200 https://registry.npmjs.org/sonic-boom/-/sonic-boom-4.0.1.tgz 412ms (cache miss)
+140 http fetch GET 200 https://registry.npmjs.org/@antora/content-aggregator/-/content-aggregator-3.1.12.tgz 423ms (cache miss)
+141 http fetch GET 200 https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.13.tgz 422ms (cache miss)
+142 http fetch GET 200 https://registry.npmjs.org/@antora/cli/-/cli-3.1.12.tgz 429ms (cache miss)
+143 http fetch GET 200 https://registry.npmjs.org/@antora%2fsite-generator 20ms (cache hit)
+144 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fsite-generator set size:64923 disposed:false
+145 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fcli cache-miss
+146 http fetch GET 200 https://registry.npmjs.org/@antora/logger/-/logger-3.1.12.tgz 435ms (cache miss)
+147 http fetch GET 200 https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz 431ms (cache miss)
+148 http fetch GET 200 https://registry.npmjs.org/@antora/asciidoc-loader/-/asciidoc-loader-3.1.12.tgz 442ms (cache miss)
+149 http fetch GET 200 https://registry.npmjs.org/@antora%2fcli 16ms (cache hit)
+150 silly packumentCache corgi:https://registry.npmjs.org/@antora%2fcli set size:133827 disposed:false
+151 http fetch GET 200 https://registry.npmjs.org/commander/-/commander-11.1.0.tgz 444ms (cache miss)
+152 http fetch GET 200 https://registry.npmjs.org/antora/-/antora-3.1.12.tgz 438ms (cache miss)
+153 silly packumentCache corgi:https://registry.npmjs.org/antora cache-miss
+154 http fetch GET 200 https://registry.npmjs.org/@antora/content-classifier/-/content-classifier-3.1.12.tgz 451ms (cache miss)
+155 http fetch GET 200 https://registry.npmjs.org/antora 9ms (cache hit)
+156 silly packumentCache corgi:https://registry.npmjs.org/antora set size:43961 disposed:false
+157 http fetch GET 200 https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz 469ms (cache miss)
+158 http fetch GET 200 https://registry.npmjs.org/thread-stream/-/thread-stream-3.2.0.tgz 469ms (cache miss)
+159 http fetch GET 200 https://registry.npmjs.org/readable-stream/-/readable-stream-4.7.0.tgz 452ms (cache miss)
+160 http fetch GET 200 https://registry.npmjs.org/readable-stream/-/readable-stream-4.7.0.tgz 454ms (cache miss)
+161 http fetch GET 200 https://registry.npmjs.org/isomorphic-git/-/isomorphic-git-1.25.10.tgz 498ms (cache miss)
+162 http fetch GET 200 https://registry.npmjs.org/pino/-/pino-9.2.0.tgz 500ms (cache miss)
+163 silly ADD node_modules/strip-json-comments
+164 silly ADD node_modules/secure-json-parse
+165 silly ADD node_modules/require-from-string
+166 silly ADD node_modules/pump
+167 silly ADD node_modules/pino-pretty
+168 silly ADD node_modules/pino-pretty/node_modules/readable-stream
+169 silly ADD node_modules/joycon
+170 silly ADD node_modules/help-me
+171 silly ADD node_modules/fast-safe-stringify
+172 silly ADD node_modules/fast-redact
+173 silly ADD node_modules/fast-copy
+174 silly ADD node_modules/end-of-stream
+175 silly ADD node_modules/dateformat
+176 silly ADD node_modules/colorette
+177 silly REMOVE node_modules/@pinojs/redact
+178 silly CHANGE node_modules/@antora/ui-loader
+179 silly CHANGE node_modules/@antora/site-mapper
+180 silly CHANGE node_modules/@antora/site-publisher
+181 silly CHANGE node_modules/@antora/redirect-producer
+182 silly CHANGE node_modules/@antora/playbook-builder
+183 silly CHANGE node_modules/@antora/site-generator
+184 silly CHANGE node_modules/@antora/page-composer
+185 silly CHANGE node_modules/@antora/navigation-builder
+186 silly CHANGE node_modules/@antora/logger
+187 silly CHANGE node_modules/@antora/document-converter
+188 silly CHANGE node_modules/@antora/file-publisher
+189 silly CHANGE node_modules/@antora/content-aggregator
+190 silly CHANGE node_modules/yauzl
+191 silly CHANGE node_modules/@antora/content-classifier
+192 silly CHANGE node_modules/@antora/asciidoc-loader
+193 silly CHANGE node_modules/@antora/cli
+194 silly CHANGE node_modules/yazl
+195 silly CHANGE node_modules/thread-stream
+196 silly REMOVE node_modules/thread-stream/node_modules/real-require
+197 silly CHANGE node_modules/sonic-boom
+198 silly CHANGE node_modules/readable-stream
+199 silly CHANGE node_modules/process-warning
+200 silly CHANGE node_modules/pino
+201 silly CHANGE node_modules/pino-abstract-transport
+202 silly ADD node_modules/pino-abstract-transport/node_modules/readable-stream
+203 silly CHANGE node_modules/mime-types
+204 silly CHANGE node_modules/mime-db
+205 silly CHANGE node_modules/js-yaml
+206 silly CHANGE node_modules/isomorphic-git
+207 silly CHANGE node_modules/commander
+208 silly CHANGE node_modules/buffer-crc32
+209 silly CHANGE node_modules/antora
+210 verbose cwd /Users/mark.plummer/repos/docs-staging
+211 verbose os Darwin 25.3.0
+212 verbose node v20.20.2
+213 verbose npm  v10.8.2
+214 verbose exit 0
+215 info ok
