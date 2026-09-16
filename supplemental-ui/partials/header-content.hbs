@@ -26,7 +26,7 @@
             {{#if (eq @root.page.layout 'home')}}
             <a class="mobile-section-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
             {{else}}
-            <a class="mobile-section-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">Cloud</a>
+            <a class="mobile-section-link is-current" href="{{{@root.page.componentVersion.url}}}">Cloud</a>
             {{/if}}
           </div>
         </div>
@@ -89,7 +89,7 @@
     {{#if (eq @root.page.layout 'home')}}
     <a class="subnav-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
     {{else}}
-    <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">Cloud</a>
+    <a class="subnav-link is-current" href="{{{@root.page.componentVersion.url}}}">Cloud</a>
     {{/if}}
   </nav>
 </header>
