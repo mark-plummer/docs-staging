@@ -43,6 +43,30 @@
             filters.docs.version = version;
         }
 
+        function themeFunction(algoliaSearchWrapper) {
+            const html = document.documentElement;
+            function onThemeChange(theme) {
+                theme = theme == 'dark' ? 'theme_docs_dark' : 'theme_docs_light';
+                algoliaSearchWrapper.classList.remove('theme_docs_light', 'theme_docs_dark');
+                algoliaSearchWrapper.classList.add(theme);
+            }
+            onThemeChange(html.getAttribute('data-theme'));
+            const observer = new MutationObserver((mutations) => {
+                for (const mutation of mutations) {
+                    if (
+                        mutation.type === 'attributes' &&
+                        mutation.attributeName === 'data-theme'
+                    ) {
+                        onThemeChange(html.getAttribute('data-theme'));
+                    }
+                }
+            });
+            observer.observe(html, {
+                attributes: true,
+                attributeFilter: ['data-theme'],
+            });
+        }
+
         // FULL SCREEN
         const fullScreenSearchWrapper = document.createElement('div');
         const fullScreenSearchContainer = document.createElement('div');
@@ -60,6 +84,7 @@
                     firstResults: 'docs',
                     showSections: ['docs'],
                     docsIndexName: 'crawler_thoughtspot_preview_documentation',
+                    theme: themeFunction,
                     onCloseButton: () => {
                         fullScreenSearchWrapper.style.display = 'none';
                         document.body.classList.remove('full_screen_search_open');
@@ -77,6 +102,7 @@
                     firstResults: 'docs',
                     showSections: ['docs'],
                     docsIndexName: 'crawler_thoughtspot_preview_documentation',
+                    theme: themeFunction,
                     viewMoreFunction: (section, searchValue, instance) => {
                         fullScreenSearchWrapper.style.display = 'block';
                         fullScreenAlgoliaSearch.setQuery(searchValue);
