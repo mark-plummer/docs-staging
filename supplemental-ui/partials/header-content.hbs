@@ -1,0 +1,95 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{{site.url}}}/cloud/latest"><img src="{{{uiRootPath}}}/img/ts-docs-blue-v2.svg" alt="{{site.title}}" class="navbar-logo"></a>
+      <div class="mobile-controls">
+        <button class="mobile-nav-toggle" aria-label="Open navigation" aria-expanded="false"></button>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+        <div class="mobile-section-dropdown">
+          <button class="mobile-section-toggle" aria-expanded="false">{{#if (eq page.layout 'home')}}Home{{else}}{{page.component.title}}{{/if}}</button>
+          <div class="mobile-section-menu">
+            {{#if (eq @root.page.layout 'home')}}
+            <a class="mobile-section-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+            {{else}}
+            <a class="mobile-section-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">Cloud</a>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-search-wrapper hide-for-print">
+      <div id="algolia-search" class="algolia_search_wrapper"></div>
+      {{!-- <div id="search-field" class="navbar-search">
+        <svg class="navbar-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="search-input" type="text" placeholder="Search...">
+        <kbd class="navbar-search-shortcut">⌘K</kbd>
+        <!-- <div id="algolia-search" class="algolia_search_wrapper"></div> -->
+      </div> --}}
+      {{!-- <a class="ask-ai-btn" href="#">
+        <svg class="ask-ai-icon" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 0L9.6 5.6L15.2 7.2L9.6 8.8L8 16L6.4 8.8L0.8 7.2L6.4 5.6Z"/>
+          <path d="M13.5 0L14.4 2.6L17 3.5L14.4 4.4L13.5 7L12.6 4.4L10 3.5L12.6 2.6Z"/>
+        </svg>
+        SpotLine AI
+      </a> --}}
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+{{#if page.versions}}
+        <div class="navbar-item page-versions">
+          <div class="page-versions-inner">
+            <button class="version-menu-toggle" title="Show other versions of page">{{page.componentVersion.displayVersion}}</button>
+            <div class="version-menu">
+              {{#each (filterPageVersions page.versions page.component.name site.components)}}
+              <a class="version{{~#if (eq ./version @root.page.version)}} is-current{{/if~}}{{~#if ./missing}} is-missing{{/if}}" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+{{/if}}
+<div class="navbar-item">
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav class="subnav" aria-label="Section navigation">
+    {{#if (eq @root.page.layout 'home')}}
+    <a class="subnav-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+    {{else}}
+    <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">Cloud</a>
+    {{/if}}
+  </nav>
+</header>
