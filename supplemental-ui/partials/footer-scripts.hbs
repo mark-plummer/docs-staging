@@ -14,8 +14,52 @@
 	h2, h3 {
 		scroll-margin-top: 20px;
 	}
+
+	.draft-banner {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: #04D1FF;
+		color: #0a082d;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		line-height: 1.4;
+		text-align: center;
+		padding: 0.5rem 1rem;
+		box-sizing: border-box;
+		z-index: 9999;
+	}
+
+	.navbar {
+		top: var(--draft-banner-height, 0px);
+	}
+
+	.subnav {
+		top: calc(var(--navbar-height) + var(--draft-banner-height, 0px));
+	}
+
+	body {
+		padding-top: calc(var(--body-top) + var(--draft-banner-height, 0px));
+	}
+
+	@media print {
+		.draft-banner {
+			display: none;
+		}
+	}
 </style>
 <script>
+    (function () {
+        function setDraftBannerHeight() {
+            var banner = document.getElementById('draft-banner');
+            var height = banner ? banner.offsetHeight : 0;
+            document.documentElement.style.setProperty('--draft-banner-height', height + 'px');
+        }
+        setDraftBannerHeight();
+        window.addEventListener('resize', setDraftBannerHeight);
+    })();
+
     let initialized = false;
     async function initializeAlgolia() {
         if (initialized) return;
