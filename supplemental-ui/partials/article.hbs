@@ -1,0 +1,10 @@
+<article class="doc">
+{{#with page.title}}
+<h1 class="page">{{{this}}}</h1>
+{{/with}}
+{{#if page.attributes.last_updated}}
+<div class="page-last-updated">Last updated: {{page.attributes.last_updated}}</div>
+{{/if}}
+{{{page.contents}}}
+{{> pagination}}
+</article>
